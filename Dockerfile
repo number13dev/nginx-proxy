@@ -10,7 +10,7 @@ RUN apt-get update \
  && rm -r /var/lib/apt/lists/*
 
 
-# Configure Nginx and apply fix for very long server names
+# Configure Nginx and apply fix for very long server names 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf \
  && sed -i 's/worker_processes  1/worker_processes  auto/' /etc/nginx/nginx.conf
 
